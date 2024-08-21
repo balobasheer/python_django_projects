@@ -1,0 +1,63 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+{% if page == 'login'%}
+<!-- <div>
+    <form method="POST" action="">
+        
+
+        <label>Email:</label>
+        <input type="text" name="email" placeholder="Enter Email:">
+        
+        <label>Password:</label>
+        <input type="password" name="password" placeholder="Enter Password:">
+        
+        <input type="submit" value="Login">
+    </form>
+
+    <p>haven't signed up yet?</p>
+    <a href="{% url 'register' %}">Sign up</a>
+</div> -->
+
+
+<div class="container">
+    <div class="box">
+        <h2>Login</h2>
+        <form action="">
+            {% csrf_token %}
+            <div class="input_box">
+                <input type="text" class="name" required>
+                <label>Email</label>
+            </div>
+
+            <div class="input_box">
+                <input type="text" class="password" required>
+                <label>Password</label>
+                <div class="password_checkbox"><input type="checkbox"><p>Show Password</p></div>
+            </div>
+
+            <div class="forgot_password"><a href="/">Forgot Password ?</a></div>
+
+            <button class="login_button" type="submit">Login</button>
+            <div class="signup_link"><a href="signup.html">Don't have an Account </a></div>
+        </form>
+    </div>
+</div>
+
+{% else %}
+
+<div>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Register">
+    </form>
+
+    <p>Already signed proceed to login</p>
+    <a href="{% url 'login' %}">Login</a>
+</div>
+{% endif %}
+
+{% endblock %}

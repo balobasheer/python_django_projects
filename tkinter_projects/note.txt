@@ -1,0 +1,25 @@
+There are three types of buttons: 
+   • Button 
+   • Checkbutton 
+   • Radiobutton
+There are four types of entry widgets for text or numbers, which allow to 
+input text with the keyboard or making a choice uint the mouse:
+   • Entry 
+   • Combobox 
+   • Spinbox 
+   • Scale
+Then there are the two complex display widgets for text and graphics: 
+   • Text 
+   • Canvas 
+These two widgets present lists:
+   • Listbox 
+   • Treeview 
+Finally these widgets are helper widgets:
+   • Frame 
+   • Separator
+   • Window 
+   • Scrollbar 
+   • SizeGrip 
+   • Progressbar 
+   • Menu 
+   • ContextMenu 

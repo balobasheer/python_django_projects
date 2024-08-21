@@ -1,0 +1,34 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <div>
+        <form method="POST" action="">
+            {% csrf_token %}
+
+            <div class="forn__group">
+                <label for="room_topic">ROOM TOPIC</label>
+                <input required type="text" value="{{room.topic.name}}" name="topic" list="topic-list" />
+                <datalist id="topic-list">
+                    <select id="room_topic">
+                        {% for topic in topics %}
+                        <option value="{{ topic.name }}">{{ topic.name }}</option>
+                        {% endfor %}
+                    </select>
+                </datalist>
+            </div>
+
+            <div class="form_group">
+                <label for="room_name">ROOM NAME</label>
+                {{form.name}}
+            </div>
+            <div class="form_group">
+                <label for="room_description">ROOM DESCRIPTION</label>
+                {{form.description}}
+            </div>
+            <input type="submit" alue="Submit">
+        </form>
+    </div>
+
+{% endblock %}
+
+
